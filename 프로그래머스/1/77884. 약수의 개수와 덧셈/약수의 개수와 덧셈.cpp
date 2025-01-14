@@ -21,13 +21,8 @@ int solution(int left, int right) {
     for(int num = left; num<=right; num++)
     {
         int divisors = countDivisors(num);
-        if(divisors%2==0)
-        {
-            answer+=num;
-        }else
-        {
-            answer-=num;
-        }
+        divisors%2==0 ? answer += num : answer -= num;
     }
+       
     return answer;
 }
